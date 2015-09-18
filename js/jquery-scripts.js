@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  var total_price = 0;
+  var total_price = [];
   var order_price = 0;
-  var custom_ingredient_price = 0;
+  var custom_ingredients_prices = [];
 
 
   $("#place_order").click(function(event){
@@ -46,7 +46,9 @@ $(document).ready(function(){
      + newOrder.ingredient_cheese + " lb of cheese and " + newOrder.ingredient_bacon +
       " servings of bacon." + ingredientInsert + " Luckily, there are only " + newOrder.ingredient_veggies + " servings of yucky green stuff on your pizzas." + "This comes to a base-price of: " + orderPrice + " Dollars.")
 
-    total_price = orderPrice +  custom_ingredient_price;
+    var custom_price_total = 0;
+    for(var i in custom_ingredients_prices) { custom_price_total += arr[i]; }
+    total_price = orderPrice +  custom_price_total;
 
     $("#show_price").text("This comes to a total price of: " + total_price);
   });
@@ -79,12 +81,13 @@ $(document).ready(function(){
       var custom_name = $(this).find("input.ingredient_name").val();
       var custom_amount = parseInt($(this).find("input.ingredient_amount").val());
       var custom_ingredient = new Ingredient( custom_name, custom_amount);
-      custom_ingredient_price = custom_amount * 5;
+      custom_ingredients_prices.push(custom_amount * 5);
       custom_ingredient_items = custom_amount + " of " + custom_name;
 
-      $("#show_customs").append("<br>" + "As custom-ingredients, you added " + custom_ingredient_items + " costing " + custom_ingredient_price);
-
-      total_price = orderPrice +  custom_ingredient_price;
+      $("#show_customs").append("<br>" + "As custom-ingredients, you added " + custom_ingredient_items);
+      var custom_price_total = 0;
+      for(var i in custom_ingredients_prices) { custom_price_total += custom_ingredients_prices[i]; }
+      total_price = orderPrice +  custom_price_total;
 
       $("#show_price").text("This comes to a total price of: " + total_price);
     });
