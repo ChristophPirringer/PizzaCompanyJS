@@ -1,12 +1,12 @@
 # PizzaCompany
 
-##### Web app to oder pizzas, sporting base-ingredients and teh chance to add additional custom ingredients, latest revision 18 September 2015
+##### Web app to order pizzas, sporting base-ingredients and the chance to add additional custom ingredients, latest revision 18 September 2015
 
 #### By **Christoph Pirringer**
 
 ## Description
 
-The app creates a base Pizzas-object, which takes values such as size, quantity of pizzas and how much of the base-ing redients of cheese, bacon and veggies are wanted.  Additionally, the user can enter custom-ingredients in dynamically created forms.  Lastly, prices for the base-order, custom-ingredients and the total price are displayed.  Additionally, the user can also 'rate' the Pizzas by changing the background of the Pizza-Company page.
+The app creates a base Pizzas-object, which takes values such as size, quantity of pizzas and how much of the base-ingredients of cheese, bacon and veggies are wanted.  Additionally, the user can enter custom-ingredients in dynamically created forms.  Lastly, prices for the base-order, custom-ingredients and the total price are displayed.  Additionally, the user can also 'rate' the Pizzas by changing the background of the Pizza-Company page.
 
 
 ## Setup
