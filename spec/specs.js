@@ -17,4 +17,11 @@ describe("#topping", function() {
     var testToppings = new Toppings();
     expect(testToppings.toppings).to.eql([]);
   });
+
+  it("will create add a toppping with the attributes of topping and amounnt to the toppings-array", function() {
+    var testToppings = new Toppings();
+    testToppings.addTopping("cheese", "10lb")
+    debugger;
+    expect(testToppings.toppings[0].topping + ", " + testToppings.toppings[0].amount ).to.eql("cheese, 10lb");
+  });
 });
