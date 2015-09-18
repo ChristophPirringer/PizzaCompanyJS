@@ -2,15 +2,6 @@
 // ###############__ Pizzas-Class__################
 // ###############################################
 describe("#pizzas", function() {
-  it("will create pizza object and return quantity", function() {
-    var testPizza = new Pizzas(5);
-    expect(testPizza.quantity).to.equal(5);
-  });
-
-  it("will create pizza object and return size", function() {
-    var testPizza = new Pizzas(1, "small");
-    expect(testPizza.size).to.equal("small");
-  });
 
   it("will calculate the price of an order", function() {
     var testPizza = new Pizzas(1, "small");
