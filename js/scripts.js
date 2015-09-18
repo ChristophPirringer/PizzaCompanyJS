@@ -38,3 +38,17 @@ function Ingredient(topping, amount) {
   this.topping = topping;
   this.amount = amount;
 }
+
+
+// ###############################################
+// #############__ Rating / Styling__#############
+// ###############################################
+function heavenlyPizza() {
+    document.body.style.backgroundImage = "url('http://www.hdwallpapers.net/previews/holy-pizza-738.jpg')";
+    document.body.style.backgroundColor = "#0066CC";
+}
+
+function hellishPizza() {
+    document.body.style.backgroundImage = "url('http://tshirtgroove.com/wp-content/uploads/2013/02/devil-pizza-t-shirt.jpg')";
+
+}

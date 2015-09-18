@@ -2,12 +2,10 @@
 <html>
   <head>
     <title>PizzaCompany</title>
-    <link rel="stylesheet" href="css/normalize.css" media="screen">
-    <link rel="stylesheet" href="css/skeleton.css" media="screen">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/jquery-scripts.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css" media="screen">
   </head>
 
@@ -35,7 +33,7 @@
             </form>
         </div>
       </div>
-
+      <br><br>
       <div id="topping_choice">
         <div class="new_ingredient">
           <form action="">
@@ -55,23 +53,33 @@
             </form>
         </div>
         <br>
-        <div class="new_ingredient">
+        <div class="new_ingredient" id="ingredient_veggies">
           <form action="">
-              <label for="ingredient_cheese">How many Veggies?</label><br>
+              <label for="ingredient_veggies">How many Veggies?</label><br>
               <input type="radio" name="ingredient_veggies" value="0" >None<br>
               <input type="radio" name="ingredient_veggies" value="-1" checked>Negative-1 Serving<br>
               <input type="radio" name="ingredient_veggies" value="-2">Negative-2 Serving
             </form>
         </div>
       </div>
+      <br>
+      <button name="custom_ingredient" id="add_custom_ingredient" class="btn">Add Custom Ingredient!</button>
+      <button type="submit" id="submit_custom_ingredient" class="btn">Add Your Custom Ingredients</button>
+      <br>
 
-      <div id="place_order">
-        <button name="place_prder" id="place_order">Order Now!</button>
+      <div id="place_order" class="lower">
+        <button name="place_prder" id="place_order" class="btn">Order Now!</button>
       </div>
 
-      <div id="show_order">
+      <div id="show_order" class="lower"></div>
+      <div id="show_customs" class="lower"></div>
 
+      <div id="rate_order" class="lower">
+        <h4>Rate our Pizzas!</h4>
+        <button type="button" onclick="heavenlyPizza()" class="btn">Your Pizzas are Divine!</button>
+        <button type="button" onclick="hellishPizza()" class="btn">Your Pizzas are from Hell!</button>
       </div>
+
 
 
 
