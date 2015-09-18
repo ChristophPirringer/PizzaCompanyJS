@@ -1,8 +1,9 @@
 // ###############################################
 // ###############__ Pizza-Class__###############
 // ###############################################
-function Pizza(quantity) {
+function Pizza(quantity, size) {
   this.quantity = quantity;
+  this.size = size;
 }
 
 
