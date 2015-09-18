@@ -2,21 +2,26 @@
 #################__Global__###################
 ############################################*/
 body{
-  color:white;
+  /*color:white;*/
   background-color:black;
   background-image: url("http://www.traditionaloven.com/articles/wp-content/uploads/2010/04/firing-up-brick-pizza-oven.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .container{
-  width: 80%
-  background-color: rgba(255,255,255,0.8);
+  width: 80%}
+
+.select,
+.result  {
+  margin-bottom:3rem;
+  background-color:rgba(255,255,255,0.6) !important;
 }
 
-#pizza_choice{
-  margin-bottom:3rem;
-  background-color:rgba(255,255,255,0.8)
+h1,
+h3{
+  color:white;
 }
 
 .btn{

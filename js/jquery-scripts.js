@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+  var total_price = 0;
+  var order_price = 0;
+  var custom_ingredient_price = 0;
 
 
   $("#place_order").click(function(event){
@@ -18,7 +20,7 @@ $(document).ready(function(){
 // #__ Creating Pizzas Object and Calculating Pice__#
 // ###############################################
     var newOrder = new Pizzas(pizza_size, pizza_quantity, ingredient_cheese, ingredient_bacon, ingredient_veggies);
-    var orderPrice = newOrder.calculatePrice(pizza_size, pizza_quantity, ingredient_cheese, ingredient_bacon, ingredient_veggies);
+    orderPrice = newOrder.calculatePrice(pizza_size, pizza_quantity, ingredient_cheese, ingredient_bacon, ingredient_veggies);
 
 // ###############################################
 // ###############__ Funny Insert__###############
@@ -42,8 +44,11 @@ $(document).ready(function(){
     $("#show_order").text("You ordered " + newOrder.pizza_quantity + " pizzas of ." +
      newOrder.pizza_quantity + " ft, diameter." + sizeInsert + " As toppings you chose: "
      + newOrder.ingredient_cheese + " lb of cheese and " + newOrder.ingredient_bacon +
-      " servings of bacon." + ingredientInsert + " Luckily, there are only " + newOrder.ingredient_veggies + " servings of yucky green stuff on your pizzas." + "This comes to a total of: " + orderPrice + " Dollars. Cash only.")
-      debugger;
+      " servings of bacon." + ingredientInsert + " Luckily, there are only " + newOrder.ingredient_veggies + " servings of yucky green stuff on your pizzas." + "This comes to a base-price of: " + orderPrice + " Dollars.")
+
+    total_price = orderPrice +  custom_ingredient_price;
+
+    $("#show_price").text("This comes to a total price of: " + total_price);
   });
 
 
@@ -63,23 +68,27 @@ $(document).ready(function(){
           '</div>').appendTo("#ingredient_veggies");
   })
 
-  // ###############################################
-  // ##########__ Submit CUstom Ingredients__#######
-  // ###############################################
-    $("#submit_custom_ingredient").click(function(event) {
-      var custom_ingredient_price = 0;
-      var custom_ingredient_items = "";
+// ###############################################
+// ##########__ Submit Custom Ingredients__#######
+// ###############################################
+  $("#submit_custom_ingredient").click(function(event) {
 
-      $(".custom_ingredient").each(function() {
-        var custom_name = $(this).find("input.ingredient_name").val();
-        var custom_amount = parseInt($(this).find("input.ingredient_amount").val());
-        var custom_ingredient = new Ingredient( custom_name, custom_amount);
-        custom_ingredient_price = custom_amount * 5;
-        custom_ingredient_items = custom_amount + " of " + custom_name;
+    var custom_ingredient_items = "";
 
-        $("#show_customs").append("<br>" + custom_ingredient_items + " costing " + custom_ingredient_price);
-      });
-    })
+    $(".custom_ingredient").each(function() {
+      var custom_name = $(this).find("input.ingredient_name").val();
+      var custom_amount = parseInt($(this).find("input.ingredient_amount").val());
+      var custom_ingredient = new Ingredient( custom_name, custom_amount);
+      custom_ingredient_price = custom_amount * 5;
+      custom_ingredient_items = custom_amount + " of " + custom_name;
+
+      $("#show_customs").append("<br>" + "As custom-ingredients, you added " + custom_ingredient_items + " costing " + custom_ingredient_price);
+
+      total_price = orderPrice +  custom_ingredient_price;
+
+      $("#show_price").text("This comes to a total price of: " + total_price);
+    });
+  })
 
 
 });
