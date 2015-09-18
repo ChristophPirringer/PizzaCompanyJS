@@ -9,7 +9,7 @@ function Pizza(quantity) {
 // ###############################################
 // ##############__ Toppings-Class__##############
 // ###############################################
-function Toppings() {
+function Toppings(toppings) {
   this.toppings = [];
 }
 
