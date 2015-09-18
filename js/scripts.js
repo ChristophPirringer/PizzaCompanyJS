@@ -1,23 +1,19 @@
 // ###############################################
-// ###############__ Player-Class__###############
+// ###############__ Pizza-Class__###############
 // ###############################################
-function Player(name, player_type) {
-  this.name = name;
-  this.player_type = player_type;
+function Pizza(quantity) {
+  this.quantity = quantity;
 }
 
 
 // ###############################################
-// ###############__ Space-Class__################
+// ##############__ Toppings-Class__##############
 // ###############################################
-function Space(coordinates) {
-  this.occupiedBy = null;
-  this.coordinates = coordinates;
-  // coordinates is non-functional except for specs at the moment
+function Toppings() {
+  this.toppings = [];
 }
 
-Space.prototype.occupy = function(markedType) {
-  if (this.occupiedBy === null){
-    this.occupiedBy = markedType;
-  }
+Toppings.prototype.addTopping = function(topping, amount) {
+  var topping = new Topping([topping, amount]);
+  this.toppings.push(topping);
 }

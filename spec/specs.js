@@ -1,10 +1,10 @@
 // ###############################################
-// ###############__ Player-Class__###############
+// ###############__ Pizza-Class__###############
 // ###############################################
-describe("#player", function() {
-  it("will create player object and return name", function() {
-    var testPlayer = new Player("Ronaldo");
-    expect(testPlayer.name).to.equal("Ronaldo");
+describe("#pizza", function() {
+  it("will create pizza object and return amount", function() {
+    var testPizza = new Pizza(5);
+    expect(testPizza.quantity).to.equal(5);
   });
 
 
