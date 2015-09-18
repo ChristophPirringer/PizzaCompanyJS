@@ -3,7 +3,16 @@ $(document).ready(function(){
   var pizza = new Pizza();
 
 
-    $("place_order").click(function(event){
+
+
+    $("#place_order").click(function(event){
+
+      var pizza_size = parseInt($('input[name="size"]:checked').val());
+      var pizza_quantity = parseInt($('input[name="quantity"]:checked').val());
+      var ingredient_cheese = parseInt($('input[name="ingredient_cheese"]:checked').val());
+      var ingredient_bacon = parseInt($('input[name="ingredient_bacon"]:checked').val());
+      var ingredient_veggies = parseInt($('input[name="ingredient_veggies"]:checked').val());
+      debugger;
 
 
 
