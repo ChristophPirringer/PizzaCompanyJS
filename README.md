@@ -1,30 +1,18 @@
-# Tic Tac Toe
+# PizzaCompany
 
-##### Web app to play Tic-Tac-Toe, latest revision 15 September 2015
+##### Web app to oder pizzas, sporting base-ingredients and teh chance to add additional custom ingredients, latest revision 18 September 2015
 
-#### By **Christoph Pirringer & Clayton Easterbrooks**
+#### By **Christoph Pirringer**
 
 ## Description
 
-The app creates a Player-, Space-, Board- and Game-class.  
-The Player-class contains the player_type property, x or o.
-
-The Space-class contains the occupiedBy attribute, which is set when Player clicks on a space to the current player_type. Also, it contains the coordinates of the space, which as of now have no functionality attached.  
-
-The Board-class contains a spaces-array of the 9 spaces making up the game-board.  
-
-The Game-class, on loading the page, creates a new game, new board, populates the board with spaces, creates two players and sets the turnCounter to 1. The turnCounter switches between -1 and 1 each turn to differentiate the active player.
-
-The gameAction function of the Game-class is called when a space is clicked. It calls on the mark-function, which in turn calls on the occupy-function to mark the space for the active player. Next, the changeTurn function switches the turnCounter to change the active Player. An X or O is inserted into the space to indicate the move, and the click-listener is removed from the space so it can not be marked again. The game then checks to see if someone has won with the winCheck method. If so, it removes all click listeners, and displays a win message.
-
-The top bar contains 3 divisions. The two divs on the ends show whose turn it is. The center div shows the game status: in-progress, or won. Tie conditions have not been implemented.
-
+The app creates a base Pizzas-object, which takes values such as size, quantity of pizzas and how much of the base-ing redients of cheese, bacon and veggies are wanted.  Additionally, the user can enter custom-ingredients in dynamically created forms.  Lastly, prices for the base-order, custom-ingredients and the total price are displayed.  Additionally, the user can also 'rate' the Pizzas by changing the background of the Pizza-Company page.
 
 
 ## Setup
 
 * Clone repo locally
-* Run TicTacToe.html
+* Run PizzaCompany.html
 * ?Profit
 
 ## Technologies Used
@@ -35,7 +23,7 @@ This app uses JavaScript and jQuery. Mocha and Chai were used for testing.
 
 
 
-Copyright (c) 2015 **Cristoph Pirringer & Clayton Easterbrooks**
+Copyright (c) 2015 **Cristoph Pirringer**
 
 This software is licensed under the MIT license.
 
