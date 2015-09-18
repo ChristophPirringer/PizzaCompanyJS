@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PizzaCompany</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen">
+    <link rel="stylesheet" href="css/skeleton.css" media="screen">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery-scripts.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css" media="screen">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Welcome to McMeatlovers!</h1>
+      <h3>The Pizza-Palace where the only greens are growing in the back of our fridge!</h3>
+
+      <div id="pizzza_choice">
+        <div class="new_pizza">
+          <form action="">
+              <label for="pizza_size">How big should your pizzas be in diameter?</label><br>
+              <input type="radio" name="size" value="1" >1 ft<br>
+              <input type="radio" name="size" value="2" >2 ft<br>
+              <input type="radio" name="size" value="3"checked>3 ft
+            </form>
+        </div>
+        <br>
+        <div class="new_pizza">
+          <form action="">
+              <label for="pizza_quantity">How many Pizzas do you want?</label><br>
+              <input type="radio" name="quantity" value="1" >One Pizza<br>
+              <input type="radio" name="quantity" value="2" checked>Two Pizzas<br>
+              <input type="radio" name="quantity" value="3">Three Pizzas
+            </form>
+        </div>
+      </div>
+
+      <div id="topping_choice">
+        <div class="new_ingredient">
+          <form action="">
+              <label for="ingredient_cheese">How much cheese?</label><br>
+              <input type="radio" name="ingredient_cheese" value="0" >None<br>
+              <input type="radio" name="ingredient_cheese" value="1" checked>Single Serving<br>
+              <input type="radio" name="ingredient_cheese" value="2">Double Serving
+            </form>
+        </div>
+        <br>
+        <div class="new_ingredient">
+          <form action="">
+              <label for="ingredient_bacon">How much bacon?</label><br>
+              <input type="radio" name="ingredient_bacon" value="2" >Double Serving<br>
+              <input type="radio" name="ingredient_bacon" value="3" checked>Triple Serving<br>
+              <input type="radio" name="ingredient_bacon" value="4">Quadruple Serving
+            </form>
+        </div>
+        <br>
+        <div class="new_ingredient">
+          <form action="">
+              <label for="ingredient_cheese">How many Veggies?</label><br>
+              <input type="radio" name="ingredient_veggies" value="0" >None<br>
+              <input type="radio" name="ingredient_veggies" value="-1" checked>Negative-1 Serving<br>
+              <input type="radio" name="ingredient_veggies" value="-2">Negative-2 Serving
+            </form>
+        </div>
+      </div>
+
+      <div id="place_order">
+        <button name="place_prder" id="place_order">Order Now!</button>
+      </div>
+
+      <div id="show_order">
+
+      </div>
+
+
+
+    </div>
+  </body>
+</html>

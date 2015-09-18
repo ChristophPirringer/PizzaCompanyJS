@@ -1,15 +1,20 @@
 // ###############################################
-// ###############__ Pizza-Class__################
+// ###############__ Pizzas-Class__################
 // ###############################################
-describe("#pizza", function() {
+describe("#pizzas", function() {
   it("will create pizza object and return quantity", function() {
-    var testPizza = new Pizza(5);
+    var testPizza = new Pizzas(5);
     expect(testPizza.quantity).to.equal(5);
   });
 
   it("will create pizza object and return size", function() {
-    var testPizza = new Pizza(1, "small");
+    var testPizza = new Pizzas(1, "small");
     expect(testPizza.size).to.equal("small");
+  });
+
+  it("will calculate the price of an order", function() {
+    var testPizza = new Pizzas(1, "small");
+    expect(testPizza.calculatePrice(1, 1, 1, 2, -1)).to.equal(9);
   });
 });
 

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var pizza = new Pizza();
+  var pizzas = new Pizzas();
 
 
 
@@ -12,7 +12,7 @@ $(document).ready(function(){
       var ingredient_cheese = parseInt($('input[name="ingredient_cheese"]:checked').val());
       var ingredient_bacon = parseInt($('input[name="ingredient_bacon"]:checked').val());
       var ingredient_veggies = parseInt($('input[name="ingredient_veggies"]:checked').val());
-      debugger;
+      // debugger;
 
 
 

@@ -1,13 +1,14 @@
 // ###############################################
-// ###############__ Pizza-Class__###############
+// ###############__ Pizzas-Class__###############
 // ###############################################
-function Pizza(quantity, size) {
+function Pizzas(quantity, size) {
   this.quantity = quantity;
   this.size = size;
 }
 
-Pizza.prototype.calculatePrice = function(pizza_size, pizza_quantity, ingredient_cheese, ingredient_bacon, ingredient_veggies) {
-  var price = pizza_size * 5 * pizza_quantity + ingredient_cheese  + ingredient_bacon * 2 + ingredient_veggies;;
+Pizzas.prototype.calculatePrice = function(pizza_size, pizza_quantity, ingredient_cheese, ingredient_bacon, ingredient_veggies) {
+  var price = pizza_size * 5 * pizza_quantity + ingredient_cheese  + ingredient_bacon * 2 + ingredient_veggies;
+  return price;
 
 }
 
